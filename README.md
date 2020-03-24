@@ -2,7 +2,7 @@
 =======
 # J-Journal
 A website made on MEAN Stack on which people can share their travel iternaries.
->>>>>>> 4ae06d1f9cee41c12a6be378dcc4f00243b3b9fd
+
 # JJ
 ## BackEnd
 To run backend follow the following steps:
@@ -16,7 +16,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2. ExpressJs
 3. NodeJs
 4. Angular 8
-<<<<<<< HEAD
 
 ## Development server
 
@@ -42,4 +41,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 =======
->>>>>>> 4ae06d1f9cee41c12a6be378dcc4f00243b3b9fd
+
