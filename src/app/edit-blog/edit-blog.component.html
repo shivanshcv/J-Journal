@@ -1,0 +1,31 @@
+<div class="text-center" style="margin-top: 50px;margin-bottom: 50px;"><h1 class="text-uppercase">Edit Journal</h1></div>
+<!-- <form>
+    <label>Title</label>
+    <input type="text" name="blog[title]" placeholder="title" [(ngModel)]="blogTitle">
+    <label>Image</label>
+    <input type="text" name="blog[image]" placeholder="image url" [(ngModel)]="blogImage">
+    <label>Description</label>
+    <input type="text" name="blog[description]" placeholder="decription" [(ngModel)]="blogDescription">
+    
+    <button type="submit" (click)="submit()">Submit</button>
+</form>
+ -->
+
+<form style=" margin: 200px;margin-top: 20px;" *ngIf="blog">
+    
+    <div class="form-group">
+      <label for="Title">Blog Title</label>
+      <input type="text" class="form-control" id="Title" placeholder="Title" name="blog[title]" [(ngModel)]="blogTitle">
+    </div>
+    <div class="form-group">
+        <label for="Image">Image Url</label>
+        <input type="text" class="form-control" id="Image" placeholder="Image UrL" name="blog[image]" [(ngModel)]="blogImage">
+      </div>
+      
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" aria-describedby="help" placeholder="Min 500 word" name="blog[description]" [(ngModel)]="blogDescription" [innerHTML]="blog.description">
+        <small id="help" class="form-text text-muted">Add Blog Description in min 500 words.</small>
+      </div>
+    <button type="submit" (click)="submit()"class="btn btn-primary">Submit</button>
+  </form>

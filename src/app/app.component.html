@@ -1,0 +1,22 @@
+
+
+<div class="header">
+  <div class="header-text">
+  <h2 class="title">J-JOURNAL</h2>
+  <p class="description">A place to share unexplored places.</p>
+</div>
+</div>
+<ul class="topnav">
+  
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="/blogs/new">Add New</a></li>
+  <li class="right"><a routerLink="/login" *ngIf="!this.bs.isLoggedIn()">Login</a></li>
+  <li class="right"><a *ngIf="this.bs.isLoggedIn()" (click)="logout()" style="cursor: pointer;">Log Out</a></li>
+  <li class="right"><a routerLink="/register" *ngIf="!this.bs.isLoggedIn()">Sign Up</a></li>
+  
+</ul>
+
+
+
+<router-outlet></router-outlet>
+<app-footer></app-footer>

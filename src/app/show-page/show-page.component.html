@@ -1,0 +1,133 @@
+<!-- <div *ngIf="blog">
+<div style="margin:50px;margin-top:10px;">
+    <img src="{{blog.image}}" style="width: 1200px;
+    height: 400px;
+    margin: 50px;">
+    <hr>
+<div style="margin: 50px;
+margin-top: 0px;
+width: 800px;
+">
+
+<h1 style="font-size: 60px;font-family: serif;font-weight:normal;display: inline-block;" class="text-uppercase">{{blog.title}}</h1>
+
+<p ng-controller="MyCtrl">{{blog.createdDate | date:'medium'}}</p>
+
+<p class="fl" style="font-size: large;" [innerHTML]="blog.description"></p>
+
+<button class="btn btn-secondary btn large" style="display: inline-block;" *ngIf="this.bs.isLoggedIn()" routerLink="/blogs/{{blog._id}}/edit">Edit Blog</button>
+<form style="display: inline-block;margin-left: 10px;">
+    <button type="submit"class="btn btn-secondary btn large" *ngIf="this.bs.isLoggedIn()" (click)="delete()">Delete Blog</button>
+</form>
+<div style="width: 70%;">
+<hr id="special">
+<div *ngFor="let comment of blog.comments">
+    <i class="fas fa-user" style="display: inline-block;"></i>
+    <p style="font-size: 20px;margin-bottom: 0px;display: inline-block;">{{comment.name}}</p>
+    
+    <div style="border: 1.5px solid hsl(0, 0%, 100%);
+    border-radius: 5px;
+    background-color: rgb(250, 246, 246);
+    box-shadow: 50px;
+    padding: 10px;;">
+    
+        <p>{{comment.comment}}</p>
+    </div>
+</div>
+</div>
+<form style="margin-top: 5px;" *ngIf="this.bs.isLoggedIn()">
+    <div class="form-group">
+      
+      <input type="text" class="form-control" name="name" [(ngModel)]="name" placeholder="Name">
+      
+    </div>
+    <div class="form-group">
+      
+        <input type="text" class="form-control" name="comments" [(ngModel)]="comment" placeholder="Write Your comment...">
+        
+      </div>
+    
+   
+    <button type="submit" (click)="submit()" class="btn btn-primary">Add Comment</button>
+  </form>
+  <button type="submit" routerLink="/login" *ngIf="!this.bs.isLoggedIn()" class="btn btn-primary">Add Comment</button>
+</div>
+
+</div>
+</div> -->
+
+
+<div class="container">
+    <div *ngIf="blog" style="width: 70%;">
+    <div class="left">
+     
+      
+        <div class="title">{{blog.title}}</div>
+        <img src={{blog.image}} class="img">
+        
+        <br><br>
+        <p class="description">{{blog.description}}</p>
+        <hr style="width: 100%;color:black;border:1px solid black;">
+        <p ng-controller="MyCtrl" class="date">{{blog.createdDate | date:'medium'}}</p>
+        <hr style="width: 100%;color:black;border:1px solid black;">
+        <!-- <button class="btn btn-secondary btn large" style="display: inline-block;" *ngIf="this.bs.isLoggedIn()" routerLink="/blogs/{{blog._id}}/edit">Edit Blog</button>
+<form style="display: inline-block;margin-left: 10px;">
+    <button type="submit"class="btn btn-secondary btn large" *ngIf="this.bs.isLoggedIn()" (click)="delete()">Delete Blog</button>
+</form> -->
+    
+<div class="btns">
+        <button  type="submit" class="editbtn" *ngIf="this.bs.isLoggedIn()" routerLink="/blogs/{{blog._id}}/edit">Edit</button>
+        <button type="submit"class="deletebtn" *ngIf="this.bs.isLoggedIn()" (click)="delete()">Delete</button>
+</div>
+     
+     <div *ngFor="let comment of blog.comments">
+        <i class="fas fa-user" style="display: inline-block;"></i>
+        <p style="font-size: 20px;margin-bottom: 0px;display: inline-block;font-">{{comment.name}}</p>
+        <p ng-controller="MyCtrl" class="datecomment">{{comment.commentDate | date:'medium'}}</p>
+        
+        <div style="border: 1.5px solid hsl(0, 0%, 100%);
+        border-radius: 5px;
+        background-color:rgb(178, 165, 165);
+        box-shadow: 50px;
+        padding: 10px;
+        color:white;" >
+        
+            <p>{{comment.comment}}</p>
+        </div>
+    </div>
+
+    <form style="margin-top: 5px;" *ngIf="this.bs.isLoggedIn()">
+        <div class="form-group">
+          
+          <input type="text" class="form-control" name="name" [(ngModel)]="name" placeholder="Name" >
+          
+        </div>
+        <div class="form-group">
+          
+            <input type="text" class="form-control" name="comments" [(ngModel)]="comment" placeholder="Write Your comment..." required>
+            
+          </div>
+        
+       
+        <button type="submit" (click)="submit()" class="btn btn-primary">Add Comment</button>
+      </form>
+      <button type="submit" routerLink="/login" *ngIf="!this.bs.isLoggedIn()" class="btn btn-primary" style="width: 25%;margin-top: 5px;">Add Comment</button>
+    </div>
+    </div>
+    
+    <div class="right">
+      <p class="follow">Follow Us</p>
+      <hr>
+
+      <div class="icons">
+  <div><a href="https://www.facebook.com/" class="fa fa-facebook"></a></div>
+  <div><a href="https://www.twitter.com" class="fa fa-twitter"></a></div>
+  <div><a href="https://www.google.com" class="fa fa-google"></a></div>
+  
+  </div>
+  <hr>
+    </div>
+    </div>
+    
+    
+  

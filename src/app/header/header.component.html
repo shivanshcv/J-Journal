@@ -1,0 +1,15 @@
+<div class="header">
+    <div class="header-text">
+    <h2 class="title">SUITS</h2>
+    <p class="description">BTemplates, the best place for Blogger Templates</p>
+  </div>
+  </div>
+  <ul class="topnav">
+    
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/blogs/new">Add New</a></li>
+    <li class="right"><a routerLink="/login" *ngIf="!this.bs.isLoggedIn()">Login</a></li>
+    <li class="right"><a *ngIf="this.bs.isLoggedIn()" (click)="logout()">Log Out</a></li>
+    <li class="right"><a routerLink="/register" *ngIf="!this.bs.isLoggedIn()">Sign Up</a></li>
+    
+  </ul>

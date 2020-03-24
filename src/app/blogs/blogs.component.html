@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="left">
+   
+    <div class="blogs" *ngFor="let blog of blogs">
+      <div class="title">{{blog.title}}</div>
+      <img src={{blog.image}} class="img">
+
+      <p class="description">{{blog.description}}</p>
+      
+     <span> <a routerLink="/blogs/{{blog._id}}" class="btn">Read More</a></span>
+      <p ng-controller="MyCtrl" class="date">{{blog.createdDate | date:'medium'}}</p>
+      <hr>
+   </div> 
+  
+  </div>
+  <div class="right">
+    <p class="follow">Follow Us</p>
+    <hr>
+    <div class="icons">
+<div><a href="https://www.facebook.com/" class="fa fa-facebook"></a></div>
+<div><a href="https://www.twitter.com" class="fa fa-twitter"></a></div>
+<div><a href="https://www.google.com" class="fa fa-google"></a></div>
+
+</div>
+<hr>
+  </div>
+  
+</div>
